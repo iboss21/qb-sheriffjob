@@ -101,7 +101,7 @@ added Quasar Phone Notifications
 - Add the following code to your server.cfg/resouces.cfg
 ```
 ensure qb-core
-ensure qb-policejob
+ensure qb-sheriffjob
 ```
 
 ## Configuration
