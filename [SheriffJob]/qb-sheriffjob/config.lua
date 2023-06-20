@@ -15,28 +15,15 @@ Config.HandCuffItem = 'handcuffs'
 Config.LicenseRank = 2
 
 Config.UseTarget = GetConvar('UseTarget', 'false') == 'true'
-Config.Locations = {
+Config.Locations = {  -- you can add more cordinats if would like. for example see ["impound"].
     ["duty"] = {
-        --[1] = vector3(441.27, -982.16, 30.69),
-        --[2] = vector3(-446.61, 6012.9, 32.29), -- paleto
-        --[3] = vector3(3090.68, -4690.89, 27.25), -- Water Special Forces
-        --[4] = vector3(1840.3, 2579.22, 46.01), -- prison
-        [5] = vector3(1834.06, 3677.83, 34.19), -- Sandyshore
+        [1] = vector3(1834.06, 3677.83, 34.19), -- Sandyshore
     },
     ["vehicle"] = {
-        --[1] = vector4(430.83, -982.96, 25.7, 180.46),
-        --[2] = vector4(471.28, -1024.12, 28.18, 278.74),
-        --[3] = vector4(-480.46, 6007.49, 31.3, 312.01), -- paleto parking
-        --[4] = vector4(3109.49, -4760.75, 15.26, 100.47), -- water Special Forces
-        --[5] = vector4(1833.42, 2541.73, 45.88, 273.78), --prison
-        [6] = vector4(1817.68, 3690.13, 33.67, 297.88), -- sandyshore parking
+        [1] = vector4(1817.68, 3690.13, 33.67, 297.88), -- sandyshore parking
     },
     ["stash"] = {
-        --[1] =vector3(484.95, -999.19, 30.69),
-        --[2] =vector3(3082.07, -4693.57, 27.25),-- Water Special Forces
-        --[3] =vector3(-452.95, 5999.48, 37.01),  -- paleto
-        --[4] = vector3(1843.97, 2574.22, 46.01), -- prison personal stash
-        [5] = vector3(1841.72, 3679.42, 34.19), -- Sandyshore personal stash
+        [1] = vector3(1841.72, 3679.42, 34.19), -- Sandyshore personal stash
     },
     ["impound"] = {
         [1] = vector4(463.38, -1019.51, 28.11, 92.6),
@@ -44,43 +31,23 @@ Config.Locations = {
         [3] = vector4(1864.12, 3692.18, 33.97, 300.69),
     },
     ["helicopter"] = {
-        --[1] = vector4(449.168, -981.325, 43.691, 87.234),
-        --[2] = vector4(-475.43, 5988.353, 31.716, 31.34), -- paletoo
-        --[3] = vector4(3047.16, -4761.32, 15.26, 284.12), -- Water Special Forces
-        [4] = vector4(1853.78, 3705.46, 34.36, 30.38), -- Sandy Shore
+        [1] = vector4(1853.78, 3705.46, 34.36, 30.38), -- Sandy Shore
     },
     ["armory"] = {
-        --[1] = vector3(482.61, -995.17, 30.69),
-        --[2] = vector3(3039.64, -4690.63, 6.08), -- Water Special Forces
-        --[3] = vector3(1841.28, 2573.74, 46.01), -- paleto
-        --[4] = vector3(1841.28, 2573.74, 46.01), -- prison
-        [5] = vector3(1836.61, 3686.77, 34.19), -- sandyshore
+        [1] = vector3(1836.61, 3686.77, 34.19), -- sandyshore
     },
     ["trash"] = {
-        --[1] = vector3(473.17, -1007.46, 26.27),
-        --[2] = vector3(3073.75, -4820.37, 15.26), -- Water Special Forces
-        --[3] = vector3(1840.24, 2593.26, 46.01), --prison
-        [4] = vector3(1839.17, 3677.29, 34.19), -- sandyshore
+        [1] = vector3(1839.17, 3677.29, 34.19), -- sandyshore
 
     },
     ["fingerprint"] = {
-        --[1] = vector3(474.73, -1013.39, 26.27),
-        --[2] = vector3(3087.58, -4685.88, 27.25), -- Water Special Forces
-        [3] = vector3(1818.57, 3666.53, 34.19), -- Sandy Shores
+        [1] = vector3(1818.57, 3666.53, 34.19), -- Sandy Shores
     },
     ["evidence"] = {
-        --[1] = vector3(475.13, -997.19, 26.27),
-        --[2] = vector3(472.51, -991.22, 26.27),
-        --[3] = vector3(472.66, -995.66, 26.27),
-        --[4] = vector3(3090.28, -4711.85, 15.26), -- Water Special Forces
-        [5] = vector3(1830.61, 3679.79, 38.86), -- Sandy Shores
+        [1] = vector3(1830.61, 3679.79, 38.86), -- Sandy Shores
     },
     ["stations"] = {
-        --[1] = {label = "Police Station", coords = vector4(428.23, -984.28, 29.76, 3.5)},
-        --[2] = {label = "Prison", coords = vector4(1845.903, 2585.873, 45.672, 272.249)},
-        --[3] = {label = "Police Station Paleto", coords = vector4(-451.55, 6014.25, 31.716, 223.81)},
-        --[4] = {label = "Water Special Forces", coords = vector4(3056.24, -4717.06, 15.26, 23.51)}, -- Water Special Forces
-        [5] = {label = "Sandy Shores Station", coords = vector4(1818.52, 3691.05, 33.67, 297.26)}, -- Sandy Shore
+        [1] = {label = "Sandy Shores Station", coords = vector4(1818.52, 3691.05, 33.67, 297.26)}, -- Sandy Shore
     },
  }
 
@@ -133,29 +100,29 @@ Config.SecurityCameras = {
 }
 
 Config.AuthorizedVehicles = {
-    -- Academy Student
+    -- Recruit
     [0] = {
        ["tribike3"] = "Police Cycle",
    },
     [1] = {
         ["tribike3"] = "Police Cycle",
     },
-    -- Cadet
+    -- Deputy
     [2] = {         
         ["tribike3"] = "Police Cycle",
     },
-    -- Officer
+    -- Sergeant
     [3] = {
        ["police2"] = "Dodge Charger Interceptor",
        ["police3"] = "Ford Explorer",
        
     },
-    -- Officer 2nd Grade
+    -- Lieutenant
     [4] = {
        ["police2"] = "Dodge Charger Interceptor",
        ["police3"] = "Ford Explorer",
     },
-    -- Officer 3nd Grade
+    -- Captain
     [5] = { 
        ["police2"] = "Dodge Charger Interceptor",
        ["police3"] = "Ford Explorer",
@@ -164,7 +131,7 @@ Config.AuthorizedVehicles = {
        ["code3camero"] = "Code 3 Camaro",
        ["code318chargk9"] = "K9 Charger",
     },
-    -- Officer Superviser
+    -- Assistant Chief
     [6] = {
        ["code3cap"] = "Chevrolet Caprice",
        ["fbi"] = "Dodge Charger Unmarked",
@@ -174,7 +141,7 @@ Config.AuthorizedVehicles = {
        ["code3camero"] = "Code 3 Camaro",
        ["code318chargk9"] = "K9 Charger",
     },
-    -- Corporal
+    -- Chief
     [7] = {
        ["code316impala"] = "LSPD Chevrolet impala", 
        ["code3cvpi"] = "Police Crown Victoria",
@@ -183,175 +150,6 @@ Config.AuthorizedVehicles = {
        ["code3camero"] = "Code 3 Camaro",
        ["pbus"] = "Penitentiary Bus",
        ["code318chargk9"] = "K9 Charger",
-    },
-    -- Investigator
-    [8] = {
-       ["fbi"] = "Dodge Charger Unmarked",
-       ["capslick"] = "Chevrolet Caprice Must be White",
-       ["code3cvpi"] = "Ford Crown Victoria",
-       ["code314charg"] = "Dodge Charger Code 3",
-       ["code318chargk9"] = "K9 Charger",  
-    },
-    --Master Investigator
-    [9] = {
-        ["fbi"] = "Dodge Charger Unmarked",
-        ["2020explorer"] = "Ford Explorer 2020",  
-        ["2011vic"] = "Ford Crown Victoria 2011",
-        ["code314charg"] = "Dodge Charger Code 3",
-        ["code318chargk9"] = "K9 Charger",
-    },
-    -- Sergeant
-    [10] = {
-       ["code318chargk9"] = "K9 Charger",
-       ["polvic2"] = "Ford Crown Victoria Must be Black",
-       ["police2"] = "Dodge Charger Interceptor",
-       ["police3"] = "Ford Explorer", 
-       ["fbi"] = "Dodge Charger unmarked",
-       ["nm_avent"] = "Speed Unit Lamborghini Unmarked",
-       ["code3camero"] = "Code 3 Camaro",
-       ["pbus"] = "Penitentiary Bus",
-    },
-    -- Sergeant 2nd Grade
-    [11] = {
-       ["polvic2"] = "Police Crown Victoria Must be Black",
-       ["police2"] = "Dodge Charger Interceptor",
-       ["police3"] = "Ford Explorer", 
-       ["fbi"] = "Dodge Charger Unmarked",
-       ["nm_avent"] = "Speed Unit Lamborghini Unmarked",
-       ["code3camero"] = "Code 3 Camaro",
-       ["pbus"] = "Penitentiary Bus",
-    },
-    -- Lieutenant I
-    [12] = {
-       ["code318chargk9"] = "K9 Charger",
-       ["police2"] = "Dodge Charger Interceptor",
-       ["police3"] = "Ford Explorer",
-       ["2020explorer"] = "Ford Explorer 2020",
-       ["2011vic"] = "Ford Crown Victoria 2011",
-       ["2018charger"] = "Dodge charger 2018",
-       ["code314charg"] = "Dodge Charger Code 3",
-       ["code3cvpi"] = "Ford Crown Victoria",
-       ["code3cap"] = "Chevrolet Caprice", 
-       ["code318tahoe"] = "Chevrolet Tahoe",
-       ["2015polstang"] = "Speed Unit Mustang",
-       ["code3camero"] = "Code 3 Camaro",
-       ["pbus"] = "Penitentiary Bus", 
-    },
-    -- Lieutenant II
-    [14] = {
-       ["code318chargk9"] = "K9 Charger",
-       ["police2"] = "Dodge Charger Interceptor",
-       ["police3"] = "Ford Explorer", 
-       ["2020explorer"] = "Ford Explorer 2020",
-       ["2011vic"] = "Ford Crown Victoria 2011",
-       ["2018charger"] = "Dodge charger 2018",
-       ["code314charg"] = "Dodge Charger Code 3",
-       ["code3cvpi"] = "Ford Crown Victoria",
-       ["code3cap"] = "Chevrolet Caprice",
-       ["code314tahoe"] = "Chevrolet Tahoe",
-       ["2015polstang"] = "Speed Unit Mustang",
-       ["code3camero"] = "code3camero",
-       ["pbus"] = "Penitentiary Bus", 
-    },
-        -- Captain 
-   [15] = {
-       ["code318chargk9"] = "K9 Charger",
-       ["code316impala"] = "Chevrolet Impala",
-       ["code310charg"] = "Dodge Charger code 3",
-       ["code314tahoe"] = "code314tahoe",
-       ["code3mustang"] = "code3mustang",
-       ["code3camero"] = "code3camero",
-       ["code3f150"] = "Ford F 150",
-       ["21tr14charg"] = "Dodge Charger Unmarked",
-       ["13tahoeslick"] = "Chevrolet Tahoe",
-       ["21tr16fpiu"] = "Ford Explorer 2021",
-       ["code3silverado"] = "Chevrolet Silverado",
-       ["pbus"] = "Penitentiary Bus", 
-   },
-   [16] = {
-       ["code316fpiu"] = "Ford Explorer 2021",
-       ["code3f250"] = "Ford F 250",
-       ["code319silv"] = "Chevrolet Silverado",
-       ["21tr18charg"] = "Dodge Charger 2018",
-       ["21trcvpi"] = "Ford Crown Victoria",
-       ["capslick"] = "Chevrolet Impala",
-       ["21tr14charg"] = "Dodge Charger 2021",
-       ["14chargslick"] = "Dodge Charger 2014",
-       ["polvic2"] = "Ford Crown Victoria Must be Black",
-       ["police2"] = "Dodge Charger IOnterceptor",
-       ["police3"] = "Ford Explorer", 
-       ["fbi"] = "Dodge Charger Unmarked",
-       ["nm_avent"] = "Speed Unit Lamborghini Unmarked",
-       ["2015polstang"] = "Speed Unit Mustang",
-       ["code3camero"] = "code3camero",
-       ["pbus"] = "Penitentiary Bus", 
-       ["polmav"] = "Police Helicopter", 
-   },
-   [17] = {
-       ["code316fpiu"] = "Ford Explorer 2021",
-       ["code3f250"] = "Ford F 250",
-       ["code319silv"] = "Chevrolet Silverado",
-       ["21tr18charg"] = "Dodge Charger 2018",
-       ["21trcvpi"] = "Ford Crown Victoria",
-       ["capslick"] = "Chevrolet Impala",
-       ["21tr14charg"] = "Dodge Charger 2021",
-       ["14chargslick"] = "Dodge Charger 2014",
-       ["polvic2"] = "Ford Crown Victoria Must be Black",
-       ["police2"] = "Dodge Charger IOnterceptor",
-       ["police3"] = "Ford Explorer", 
-       ["fbi"] = "Dodge Charger Unmarked",
-       ["nm_avent"] = "Speed Unit Lamborghini Unmarked",
-       ["2015polstang"] = "Speed Unit Mustang",
-       ["code3camero"] = "code3camero",
-       ["pbus"] = "Penitentiary Bus", 
-       ["polmav"] = "Police Helicopter", 
-   },
-   -- chief of police
-   [18] = {
-    ["2020explorer"] = "2020 Explorer",
-    ["2011vic"] = "2011vic",
-    ["2018charger"] = "2018charger",
-    ["2014charger"] = "2014charger",
-    ["code314charg"] = "code314charg",
-    ["code3cvpi"] = "code3cvpi",
-    ["code3cap"] = "code3cap",
-    ["code3trailer"] = "code3trailer",
-    ["code3trailer2"] = "code3trailer2",
-    ["code318tahoek9"] = "code318tahoek9",
-    ["boattrailer"] = "boattrailer",
-    ["trailersmall"] = "trailersmall",
-    ["code320exp"] = "code320exp",
-    ["code3boat"] = "code3boat",
-    ["code318chargk9"] = "code318chargk9",
-    ["code316impala"] = "code316impala",
-    ["code310charg"] = "code310charg",
-    ["code314tahoe"] = "code314tahoe",
-    ["code3trailer2"] = "code3trailer2",
-    ["code3mustang"] = "code3mustang",
-    ["code3f150"] = "code3f150",
-    ["code3silverado"] = "code3silverado",
-    ["code3bmw"] = "code3bmw",
-    ["code3durango"] = "code3durango",
-    ["code316fpiu"] = "code316fpiu",
-    ["code3f250"] = "code3f250",
-    ["code319silv"] = "code319silv",
-    ["21tr18charg"] = "21tr18charg",
-    ["21trcvpi"] = "21trcvpi",
-    ["capslick"] = "capslick",
-    ["21tr14charg"] = "21tr14charg",
-    ["14chargslick"] = "14chargslick",
-    ["13tahoeslick"] = "13tahoeslick",
-    ["21tr16fpiu"] = "21tr16fpiu",
-    ["16fpiuslick"] = "16fpiuslick",
-    ["polvic2"] = "police Crown Vic",
-    ["police2"] = "Dodge Charger",
-    ["police3"] = "Ford Explorer", 
-    ["fbi"] = "FBI Unmarked",
-    ["nm_avent"] = "Lamb Speed Chase Unmarked",
-    ["2015polstang"] = "Speed Unit Mustang",
-    ["code3camero"] = "Code 3 Camaro",
-    ["pbus"] = "Penitentiary Bus", 
-    ["polmav"] = "Police Helicopter", 
     },
 }
 
