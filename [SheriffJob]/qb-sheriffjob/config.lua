@@ -53,7 +53,7 @@ Config.Locations = {  -- you can add more cordinats if would like. for example s
 
 Config.ArmoryWhitelist = {}
 
-Config.PoliceHelicopter = "POLMAV"
+Config.sheriffHelicopter = "POLMAV"
 
 Config.SecurityCameras = {
     hideradar = false,
@@ -102,30 +102,30 @@ Config.SecurityCameras = {
 Config.AuthorizedVehicles = {
     -- Recruit
     [0] = {
-       ["tribike3"] = "Police Cycle",
+       ["tribike3"] = "sheriff Cycle",
    },
     [1] = {
-        ["tribike3"] = "Police Cycle",
+        ["tribike3"] = "sheriff Cycle",
     },
     -- Deputy
     [2] = {         
-        ["tribike3"] = "Police Cycle",
+        ["tribike3"] = "sheriff Cycle",
     },
     -- Sergeant
     [3] = {
-       ["police2"] = "Dodge Charger Interceptor",
-       ["police3"] = "Ford Explorer",
+       ["sheriff2"] = "Dodge Charger Interceptor",
+       ["sheriff3"] = "Ford Explorer",
        
     },
     -- Lieutenant
     [4] = {
-       ["police2"] = "Dodge Charger Interceptor",
-       ["police3"] = "Ford Explorer",
+       ["sheriff2"] = "Dodge Charger Interceptor",
+       ["sheriff3"] = "Ford Explorer",
     },
     -- Captain
     [5] = { 
-       ["police2"] = "Dodge Charger Interceptor",
-       ["police3"] = "Ford Explorer",
+       ["sheriff2"] = "Dodge Charger Interceptor",
+       ["sheriff3"] = "Ford Explorer",
        ["21tr14charg"] = "2014 Charger Must be Black",
        ["2015polstang"] = "Speed Unit Mustang",
        ["code3camero"] = "Code 3 Camaro",
@@ -135,7 +135,7 @@ Config.AuthorizedVehicles = {
     [6] = {
        ["code3cap"] = "Chevrolet Caprice",
        ["fbi"] = "Dodge Charger Unmarked",
-       ["police3"] = "Ford Explorer",
+       ["sheriff3"] = "Ford Explorer",
        ["13tahoeslick"] = "Chevrolet Tahoe Must be White",
        ["2015polstang"] = "Speed Unit Mustang",
        ["code3camero"] = "Code 3 Camaro",
@@ -144,8 +144,8 @@ Config.AuthorizedVehicles = {
     -- Chief
     [7] = {
        ["code316impala"] = "LSPD Chevrolet impala", 
-       ["code3cvpi"] = "Police Crown Victoria",
-       ["police3"] = "Police Interceptor Explorer",
+       ["code3cvpi"] = "sheriff Crown Victoria",
+       ["sheriff3"] = "sheriff Interceptor Explorer",
        ["2015polstang"] = "Speed Unit Mustang",
        ["code3camero"] = "Code 3 Camaro",
        ["pbus"] = "Penitentiary Bus",
@@ -194,7 +194,7 @@ Config.CarItems = {
         slot = 2,
     },
     [3] = {
-        name = "police_stormram",
+        name = "sheriff_stormram",
         amount = 1,
         info = {},
         type = "item",
@@ -217,7 +217,7 @@ Config.CarItems = {
 }
 
 Config.Items = {
-    label = "Police Armory",
+    label = "sheriff Armory",
     slots = 30,
     items = {
         [1] = {
@@ -362,7 +362,7 @@ Config.Items = {
             authorizedJobGrades = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19}
         },
         [14] = {
-            name = "police_stormram",
+            name = "sheriff_stormram",
             price = 0,
             amount = 50,
             info = {},

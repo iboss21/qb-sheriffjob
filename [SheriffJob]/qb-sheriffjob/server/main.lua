@@ -183,7 +183,7 @@ QBCore.Commands.Add("pobject", Lang:t("commands.place_object"), {{name = "type",
             TriggerClientEvent("sheriff:client:deleteObject", src)
         end
     else
-        TriggerClientEvent('QBCore:Notify', src, Lang:t("error.on_duty_police_only"), 'error')
+        TriggerClientEvent('QBCore:Notify', src, Lang:t("error.on_duty_sheriff_only"), 'error')
     end
 end)
 
@@ -193,7 +193,7 @@ QBCore.Commands.Add("cuff", Lang:t("commands.cuff_player"), {}, false, function(
     if Player.PlayerData.job.name == "sheriff" and Player.PlayerData.job.onduty then
         TriggerClientEvent("sheriff:client:CuffPlayer", src)
     else
-        TriggerClientEvent('QBCore:Notify', src, Lang:t("error.on_duty_police_only"), 'error')
+        TriggerClientEvent('QBCore:Notify', src, Lang:t("error.on_duty_sheriff_only"), 'error')
     end
 end)
 
@@ -214,7 +214,7 @@ QBCore.Commands.Add("clearcasings", Lang:t("commands.clear_casign"), {}, false, 
     if Player.PlayerData.job.name == "sheriff" and Player.PlayerData.job.onduty then
         TriggerClientEvent("evidence:client:ClearCasingsInArea", src)
     else
-        TriggerClientEvent('QBCore:Notify', src, Lang:t("error.on_duty_police_only"), 'error')
+        TriggerClientEvent('QBCore:Notify', src, Lang:t("error.on_duty_sheriff_only"), 'error')
     end
 end)
 
@@ -224,7 +224,7 @@ QBCore.Commands.Add("jail", Lang:t("commands.jail_player"), {}, false, function(
     if Player.PlayerData.job.name == "sheriff" and Player.PlayerData.job.onduty then
         TriggerClientEvent("sheriff:client:JailPlayer", src)
     else
-        TriggerClientEvent('QBCore:Notify', src, Lang:t("error.on_duty_police_only"), 'error')
+        TriggerClientEvent('QBCore:Notify', src, Lang:t("error.on_duty_sheriff_only"), 'error')
     end
 end)
 
@@ -235,7 +235,7 @@ QBCore.Commands.Add("unjail", Lang:t("commands.unjail_player"), {{name = "id", h
         local playerId = tonumber(args[1])
         TriggerClientEvent("prison:client:UnjailPerson", playerId)
     else
-        TriggerClientEvent('QBCore:Notify', src, Lang:t("error.on_duty_police_only"), 'error')
+        TriggerClientEvent('QBCore:Notify', src, Lang:t("error.on_duty_sheriff_only"), 'error')
     end
 end)
 
@@ -245,7 +245,7 @@ QBCore.Commands.Add("clearblood", Lang:t("commands.clearblood"), {}, false, func
     if Player.PlayerData.job.name == "sheriff" and Player.PlayerData.job.onduty then
         TriggerClientEvent("evidence:client:ClearBlooddropsInArea", src)
     else
-        TriggerClientEvent('QBCore:Notify', src, Lang:t("error.on_duty_police_only"), 'error')
+        TriggerClientEvent('QBCore:Notify', src, Lang:t("error.on_duty_sheriff_only"), 'error')
     end
 end)
 
@@ -255,7 +255,7 @@ QBCore.Commands.Add("seizecash", Lang:t("commands.seizecash"), {}, false, functi
     if Player.PlayerData.job.name == "sheriff" and Player.PlayerData.job.onduty then
         TriggerClientEvent("sheriff:client:SeizeCash", src)
     else
-        TriggerClientEvent('QBCore:Notify', src, Lang:t("error.on_duty_police_only"), 'error')
+        TriggerClientEvent('QBCore:Notify', src, Lang:t("error.on_duty_sheriff_only"), 'error')
     end
 end)
 
@@ -265,7 +265,7 @@ QBCore.Commands.Add("sc", Lang:t("commands.softcuff"), {}, false, function(sourc
     if Player.PlayerData.job.name == "sheriff" and Player.PlayerData.job.onduty then
         TriggerClientEvent("sheriff:client:CuffPlayerSoft", src)
     else
-        TriggerClientEvent('QBCore:Notify', src, Lang:t("error.on_duty_police_only"), 'error')
+        TriggerClientEvent('QBCore:Notify', src, Lang:t("error.on_duty_sheriff_only"), 'error')
     end
 end)
 
@@ -275,7 +275,7 @@ QBCore.Commands.Add("cam", Lang:t("commands.camera"), {{name = "camid", help = L
     if Player.PlayerData.job.name == "sheriff" and Player.PlayerData.job.onduty then
         TriggerClientEvent("sheriff:client:ActiveCamera", src, tonumber(args[1]))
     else
-        TriggerClientEvent('QBCore:Notify', src, Lang:t("error.on_duty_police_only"), 'error')
+        TriggerClientEvent('QBCore:Notify', src, Lang:t("error.on_duty_sheriff_only"), 'error')
     end
 end)
 
@@ -293,7 +293,7 @@ QBCore.Commands.Add("flagplate", Lang:t("commands.flagplate"), {{name = "plate",
         }
         TriggerClientEvent('QBCore:Notify', src, Lang:t("info.vehicle_flagged", {vehicle = args[1]:upper(), reason = table.concat(reason, " ")}))
     else
-        TriggerClientEvent('QBCore:Notify', src, Lang:t("error.on_duty_police_only"), 'error')
+        TriggerClientEvent('QBCore:Notify', src, Lang:t("error.on_duty_sheriff_only"), 'error')
     end
 end)
 
@@ -312,7 +312,7 @@ QBCore.Commands.Add("unflagplate", Lang:t("commands.unflagplate"), {{name = "pla
             TriggerClientEvent('QBCore:Notify', src, Lang:t("error.vehicle_not_flag"), 'error')
         end
     else
-        TriggerClientEvent('QBCore:Notify', src, Lang:t("error.on_duty_police_only"), 'error')
+        TriggerClientEvent('QBCore:Notify', src, Lang:t("error.on_duty_sheriff_only"), 'error')
     end
 end)
 
@@ -330,7 +330,7 @@ QBCore.Commands.Add("plateinfo", Lang:t("commands.plateinfo"), {{name = "plate",
             TriggerClientEvent('QBCore:Notify', src, Lang:t("error.vehicle_not_flag"), 'error')
         end
     else
-        TriggerClientEvent('QBCore:Notify', src, Lang:t("error.on_duty_police_only"), 'error')
+        TriggerClientEvent('QBCore:Notify', src, Lang:t("error.on_duty_sheriff_only"), 'error')
     end
 end)
 
@@ -340,7 +340,7 @@ QBCore.Commands.Add("depot", Lang:t("commands.depot"), {{name = "price", help = 
     if Player.PlayerData.job.name == "sheriff" and Player.PlayerData.job.onduty then
         TriggerClientEvent("sheriff:client:ImpoundVehicle", src, false, tonumber(args[1]))
     else
-        TriggerClientEvent('QBCore:Notify', src, Lang:t("error.on_duty_police_only"), 'error')
+        TriggerClientEvent('QBCore:Notify', src, Lang:t("error.on_duty_sheriff_only"), 'error')
     end
 end)
 
@@ -350,7 +350,7 @@ QBCore.Commands.Add("impound", Lang:t("commands.impound"), {}, false, function(s
     if Player.PlayerData.job.name == "sheriff" and Player.PlayerData.job.onduty then
         TriggerClientEvent("sheriff:client:ImpoundVehicle", src, true)
     else
-        TriggerClientEvent('QBCore:Notify', src, Lang:t("error.on_duty_police_only"), 'error')
+        TriggerClientEvent('QBCore:Notify', src, Lang:t("error.on_duty_sheriff_only"), 'error')
     end
 end)
 
@@ -362,7 +362,7 @@ QBCore.Commands.Add("paytow", Lang:t("commands.paytow"), {{name = "id", help = L
         local OtherPlayer = QBCore.Functions.GetPlayer(playerId)
         if OtherPlayer then
             if OtherPlayer.PlayerData.job.name == "tow" then
-                OtherPlayer.Functions.AddMoney("bank", 500, "police-tow-paid")
+                OtherPlayer.Functions.AddMoney("bank", 500, "sheriff-tow-paid")
                 TriggerClientEvent('QBCore:Notify', OtherPlayer.PlayerData.source, Lang:t("success.tow_paid"), 'success')
                 TriggerClientEvent('QBCore:Notify', src, Lang:t("info.tow_driver_paid"))
             else
@@ -370,7 +370,7 @@ QBCore.Commands.Add("paytow", Lang:t("commands.paytow"), {{name = "id", help = L
             end
         end
     else
-        TriggerClientEvent('QBCore:Notify', src, Lang:t("error.on_duty_police_only"), 'error')
+        TriggerClientEvent('QBCore:Notify', src, Lang:t("error.on_duty_sheriff_only"), 'error')
     end
 end)
 
@@ -382,14 +382,14 @@ QBCore.Commands.Add("paylawyer", Lang:t("commands.paylawyer"), {{name = "id",hel
         local OtherPlayer = QBCore.Functions.GetPlayer(playerId)
         if not OtherPlayer then return end
         if OtherPlayer.PlayerData.job.name == "lawyer" then
-            OtherPlayer.Functions.AddMoney("bank", 500, "police-lawyer-paid")
+            OtherPlayer.Functions.AddMoney("bank", 500, "sheriff-lawyer-paid")
             TriggerClientEvent('QBCore:Notify', OtherPlayer.PlayerData.source, Lang:t("success.tow_paid"), 'success')
             TriggerClientEvent('QBCore:Notify', src, Lang:t("info.paid_lawyer"))
         else
             TriggerClientEvent('QBCore:Notify', src, Lang:t("error.not_lawyer"), "error")
         end
     else
-        TriggerClientEvent('QBCore:Notify', src, Lang:t("error.on_duty_police_only"), 'error')
+        TriggerClientEvent('QBCore:Notify', src, Lang:t("error.on_duty_sheriff_only"), 'error')
     end
 end)
 
@@ -427,7 +427,7 @@ QBCore.Commands.Add('fine', Lang:t("commands.fine"), {{name = 'id', help = Lang:
             TriggerClientEvent('QBCore:Notify', source, Lang:t("error.not_online"), 'error')
         end
     else
-        TriggerClientEvent('QBCore:Notify', source, Lang:t("error.on_duty_police_only"), 'error')
+        TriggerClientEvent('QBCore:Notify', source, Lang:t("error.on_duty_sheriff_only"), 'error')
     end
 end)
 
@@ -437,7 +437,7 @@ QBCore.Commands.Add("anklet", Lang:t("commands.anklet"), {}, false, function(sou
     if Player.PlayerData.job.name == "sheriff" and Player.PlayerData.job.onduty then
         TriggerClientEvent("sheriff:client:CheckDistance", src)
     else
-        TriggerClientEvent('QBCore:Notify', src, Lang:t("error.on_duty_police_only"), 'error')
+        TriggerClientEvent('QBCore:Notify', src, Lang:t("error.on_duty_sheriff_only"), 'error')
     end
 end)
 
@@ -454,7 +454,7 @@ QBCore.Commands.Add("ankletlocation", Lang:t("commands.ankletlocation"), {{name 
             TriggerClientEvent('QBCore:Notify', src, Lang:t("error.no_anklet"), 'error')
         end
     else
-        TriggerClientEvent('QBCore:Notify', src, Lang:t("error.on_duty_police_only"), 'error')
+        TriggerClientEvent('QBCore:Notify', src, Lang:t("error.on_duty_sheriff_only"), 'error')
     end
 end)
 
@@ -464,7 +464,7 @@ QBCore.Commands.Add("takedrivinglicense", Lang:t("commands.drivinglicense"), {},
     if Player.PlayerData.job.name == "sheriff" and Player.PlayerData.job.onduty then
         TriggerClientEvent("sheriff:client:SeizeDriverLicense", source)
     else
-        TriggerClientEvent('QBCore:Notify', src, Lang:t("error.on_duty_police_only"), 'error')
+        TriggerClientEvent('QBCore:Notify', src, Lang:t("error.on_duty_sheriff_only"), 'error')
     end
 end)
 
@@ -499,10 +499,10 @@ RegisterNetEvent('sheriff:server:SendTrackerLocation', function(coords, requestI
         description = msg
     }
     TriggerClientEvent("sheriff:client:TrackerMessage", requestId, msg, coords)
-    TriggerClientEvent("qs-smartphone:client:addPoliceAlert", requestId, alertData)
+    TriggerClientEvent("qs-smartphone:client:addsheriffAlert", requestId, alertData)
 end)
 
-QBCore.Commands.Add('911p', Lang:t("commands.police_report"), {{name='message', help= Lang:t("commands.message_sent")}}, false, function(source, args)
+QBCore.Commands.Add('911p', Lang:t("commands.sheriff_report"), {{name='message', help= Lang:t("commands.message_sent")}}, false, function(source, args)
 	local src = source
     local message
 	if args[1] then message = table.concat(args, " ") else message = Lang:t("commands.civilian_call") end
@@ -512,8 +512,8 @@ QBCore.Commands.Add('911p', Lang:t("commands.police_report"), {{name='message', 
     for _, v in pairs(players) do
         if v and v.PlayerData.job.name == 'sheriff' and v.PlayerData.job.onduty then
             local alertData = {title = Lang:t("commands.emergency_call"), coords = {x = coords.x, y = coords.y, z = coords.z}, description = message}
-            TriggerClientEvent("qs-smartphone:client:addPoliceAlert", v.PlayerData.source, alertData)
-            TriggerClientEvent('sheriff:client:policeAlert', v.PlayerData.source, coords, message)
+            TriggerClientEvent("qs-smartphone:client:addsheriffAlert", v.PlayerData.source, alertData)
+            TriggerClientEvent('sheriff:client:sheriffAlert', v.PlayerData.source, coords, message)
         end
     end
 end)
@@ -617,7 +617,7 @@ QBCore.Functions.CreateCallback('sheriff:GetCops', function(_, cb)
     cb(amount)
 end)
 
-QBCore.Functions.CreateCallback('sheriff:server:IsPoliceForcePresent', function(_, cb)
+QBCore.Functions.CreateCallback('sheriff:server:IssheriffForcePresent', function(_, cb)
     local retval = false
     local players = QBCore.Functions.GetQBPlayers()
     for _, v in pairs(players) do
@@ -633,12 +633,12 @@ end)
 AddEventHandler('onResourceStart', function(resourceName)
     if resourceName == GetCurrentResourceName() then
         CreateThread(function()
-            MySQL.query("DELETE FROM stashitems WHERE stash = 'policetrash'")
+            MySQL.query("DELETE FROM stashitems WHERE stash = 'sherifftrash'")
         end)
     end
 end)
 
-RegisterNetEvent('sheriff:server:policeAlert', function(text)
+RegisterNetEvent('sheriff:server:sheriffAlert', function(text)
     local src = source
     local ped = GetPlayerPed(src)
     local coords = GetEntityCoords(ped)
@@ -646,8 +646,8 @@ RegisterNetEvent('sheriff:server:policeAlert', function(text)
     for _, v in pairs(players) do
         if v and v.PlayerData.job.name == 'sheriff' and v.PlayerData.job.onduty then
             local alertData = {title = Lang:t('info.new_call'), coords = {x = coords.x, y = coords.y, z = coords.z}, description = text}
-            TriggerClientEvent("qs-smartphone:client:addPoliceAlert", v.PlayerData.source, alertData)
-            TriggerClientEvent('sheriff:client:policeAlert', v.PlayerData.source, coords, text)
+            TriggerClientEvent("qs-smartphone:client:addsheriffAlert", v.PlayerData.source, alertData)
+            TriggerClientEvent('sheriff:client:sheriffAlert', v.PlayerData.source, coords, text)
         end
     end
 end)
@@ -816,13 +816,13 @@ end)
 --         if Player then
 --             if (Player.PlayerData.job.name == "sheriff" and Player.PlayerData.job.onduty) then
 --                 if street2 then
---                     TriggerClientEvent("112:client:SendPoliceAlert", v, "flagged", {
+--                     TriggerClientEvent("112:client:SendsheriffAlert", v, "flagged", {
 --                         camId = camId,
 --                         plate = plate,
 --                         streetLabel = street1 .. " " .. street2
 --                     }, blipSettings)
 --                 else
---                     TriggerClientEvent("112:client:SendPoliceAlert", v, "flagged", {
+--                     TriggerClientEvent("112:client:SendsheriffAlert", v, "flagged", {
 --                         camId = camId,
 --                         plate = plate,
 --                         streetLabel = street1
@@ -862,7 +862,7 @@ RegisterNetEvent('sheriff:server:SeizeCash', function(playerId)
 
     local moneyAmount = SearchedPlayer.PlayerData.money["cash"]
     local info = { cash = moneyAmount }
-    SearchedPlayer.Functions.RemoveMoney("cash", moneyAmount, "police-cash-seized")
+    SearchedPlayer.Functions.RemoveMoney("cash", moneyAmount, "sheriff-cash-seized")
     Player.Functions.AddItem("moneybag", 1, false, info)
     TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items["moneybag"], "add")
     TriggerClientEvent('QBCore:Notify', SearchedPlayer.PlayerData.source, Lang:t("info.cash_confiscated"))
@@ -902,8 +902,8 @@ RegisterNetEvent('sheriff:server:RobPlayer', function(playerId)
     if not Player or not SearchedPlayer then return end
 
     local money = SearchedPlayer.PlayerData.money["cash"]
-    Player.Functions.AddMoney("cash", money, "police-player-robbed")
-    SearchedPlayer.Functions.RemoveMoney("cash", money, "police-player-robbed")
+    Player.Functions.AddMoney("cash", money, "sheriff-player-robbed")
+    SearchedPlayer.Functions.RemoveMoney("cash", money, "sheriff-player-robbed")
     TriggerClientEvent('QBCore:Notify', SearchedPlayer.PlayerData.source, Lang:t("info.cash_robbed", {money = money}))
     TriggerClientEvent('QBCore:Notify', Player.PlayerData.source, Lang:t("info.stolen_money", {stolen = money}))
 end)

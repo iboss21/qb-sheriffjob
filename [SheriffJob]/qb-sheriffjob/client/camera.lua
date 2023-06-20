@@ -81,7 +81,7 @@ local function CreateInstuctionScaleform(scaleform)
 end
 
 -- Events
-RegisterNetEvent('police:client:ActiveCamera', function(cameraId)
+RegisterNetEvent('sheriff:client:ActiveCamera', function(cameraId)
     if Config.SecurityCameras.cameras[cameraId] then
         DoScreenFadeOut(250)
         while not IsScreenFadedOut() do
@@ -117,19 +117,19 @@ RegisterNetEvent('police:client:ActiveCamera', function(cameraId)
     end
 end)
 
-RegisterNetEvent('police:client:DisableAllCameras', function()
+RegisterNetEvent('sheriff:client:DisableAllCameras', function()
     for k, _ in pairs(Config.SecurityCameras.cameras) do
         Config.SecurityCameras.cameras[k].isOnline = false
     end
 end)
 
-RegisterNetEvent('police:client:EnableAllCameras', function()
+RegisterNetEvent('sheriff:client:EnableAllCameras', function()
     for k, _ in pairs(Config.SecurityCameras.cameras) do
         Config.SecurityCameras.cameras[k].isOnline = true
     end
 end)
 
-RegisterNetEvent('police:client:SetCamera', function(key, isOnline)
+RegisterNetEvent('sheriff:client:SetCamera', function(key, isOnline)
     if type(key) == 'table' and table.type(key) == 'array' then
         for _, v in pairs(key) do
             Config.SecurityCameras.cameras[v].isOnline = isOnline
@@ -137,7 +137,7 @@ RegisterNetEvent('police:client:SetCamera', function(key, isOnline)
     elseif type(key) == 'number' then
         Config.SecurityCameras.cameras[key].isOnline = isOnline
     else
-        error('police:client:SetCamera did not receive the right type of key\nreceived type: ' .. type(key) .. '\nreceived value: ' .. key)
+        error('sheriff:client:SetCamera did not receive the right type of key\nreceived type: ' .. type(key) .. '\nreceived value: ' .. key)
     end
 end)
 

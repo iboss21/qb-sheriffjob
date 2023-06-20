@@ -1,6 +1,6 @@
 # QBCore Sheriff Job
 QBCore Sheriff Job
-Sheriff Job for QBCore Framework :police_officer:
+Sheriff Job for QBCore Framework :sheriff_officer:
 remake of qb-sheriffjob
 added Quasar Phone Notifications
 # License
@@ -36,15 +36,15 @@ added Quasar Phone Notifications
 
 ## Screenshots
 ![On Duty / Off Duty](https://imgur.com/KO2ydlt.png)
-![Whitelisted Police Armory](https://imgur.com/TQVIYFb.png)
-![Whitelisted Police Stash](https://imgur.com/Hh2fbs4.png)
+![Whitelisted sheriff Armory](https://imgur.com/TQVIYFb.png)
+![Whitelisted sheriff Stash](https://imgur.com/Hh2fbs4.png)
 ![Vehicle Spawner](https://imgur.com/plgZ9oD.png)
 ![Helicopter Spawner](https://imgur.com/jE2IoqK.png)
 ![Fingerprint Scan](https://imgur.com/btmurxh.png)
 ![Evidence Stash](https://imgur.com/KBOoUy5.png)
 ![Spike Placing](https://imgur.com/mTN6c0h.png)
 ![Object Placing](https://imgur.com/7Jate4f.png)
-![Police Alert](https://imgur.com/rAIiWYH.png)
+![sheriff Alert](https://imgur.com/rAIiWYH.png)
 ![Securty Cam](https://imgur.com/vFr8nWf.png)
 
 ## Features
@@ -61,7 +61,7 @@ added Quasar Phone Notifications
 - GSR
 - Blood drop
 - Evidence bag & Money bag
-- Police radar
+- sheriff radar
 - Handcuff as an item (Can used via command too. Check Commands section.)
 - Emergency services can see each other on map
 
@@ -85,7 +85,7 @@ added Quasar Phone Notifications
 - /impound - Impounds nearby vehicle permanently.
 - /paytow [id] - Makes payment to the tow driver.
 - /paylawyer [id] - Makes payment to the lawyer.
-- /radar - Toggles the police radar.
+- /radar - Toggles the sheriff radar.
 - /911 [message] - Sends a report to emergency services.
 - /911r [id] - Used to respond the emergency alerts.
 - /911a [message] - Sends an anonymous report to emergency services (gives no location).
@@ -155,10 +155,10 @@ Config.Locations = {
    ["evidence3"] = { -- Evidence Closet 3 Marker
        [1] = vector4(455.1456, -985.462, 30.689, 2.854),
    },
-   ["stations"] = { -- Police Stations Blips
-       [1] = {label = "Police Station", coords = vector4(428.23, -984.28, 29.76, 3.5)},
+   ["stations"] = { -- sheriff Stations Blips
+       [1] = {label = "sheriff Station", coords = vector4(428.23, -984.28, 29.76, 3.5)},
        [2] = {label = "Prison", coords = vector4(1845.903, 2585.873, 45.672, 272.249)},
-       [3] = {label = "Police Station Paleto", coords = vector4(-451.55, 6014.25, 31.716, 223.81)},
+       [3] = {label = "sheriff Station Paleto", coords = vector4(-451.55, 6014.25, 31.716, 223.81)},
    },
 }
 
@@ -207,60 +207,60 @@ Config.SecurityCameras = { -- Security Cam Locations
     },
 }
 
-Config.AuthorizedVehicles = { -- Police Vehicles and required grade
+Config.AuthorizedVehicles = { -- sheriff Vehicles and required grade
 	-- Grade 0
 	[0] = {
-		["police"] = "Police Car 1",
-		["police2"] = "Police Car 2",
-		["police3"] = "Police Car 3",
-		["police4"] = "Police Car 4",
-		["policeb"] = "Police Car 5",
-		["policet"] = "Police Car 6",
+		["sheriff"] = "sheriff Car 1",
+		["sheriff2"] = "sheriff Car 2",
+		["sheriff3"] = "sheriff Car 3",
+		["sheriff4"] = "sheriff Car 4",
+		["sheriffb"] = "sheriff Car 5",
+		["sherifft"] = "sheriff Car 6",
 		["sheriff"] = "Sheriff Car 1",
 		["sheriff2"] = "Sheriff Car 2",
 	},
 	-- Grade 1
 	[1] = {
-		["police"] = "Police Car 1",
-		["police2"] = "Police Car 2",
-		["police3"] = "Police Car 3",
-		["police4"] = "Police Car 4",
-		["policeb"] = "Police Car 5",
-		["policet"] = "Police Car 6",
+		["sheriff"] = "sheriff Car 1",
+		["sheriff2"] = "sheriff Car 2",
+		["sheriff3"] = "sheriff Car 3",
+		["sheriff4"] = "sheriff Car 4",
+		["sheriffb"] = "sheriff Car 5",
+		["sherifft"] = "sheriff Car 6",
 		["sheriff"] = "Sheriff Car 1",
 		["sheriff2"] = "Sheriff Car 2",
 
 	},
 	-- Grade 2
 	[2] = {
-		["police"] = "Police Car 1",
-		["police2"] = "Police Car 2",
-		["police3"] = "Police Car 3",
-		["police4"] = "Police Car 4",
-		["policeb"] = "Police Car 5",
-		["policet"] = "Police Car 6",
+		["sheriff"] = "sheriff Car 1",
+		["sheriff2"] = "sheriff Car 2",
+		["sheriff3"] = "sheriff Car 3",
+		["sheriff4"] = "sheriff Car 4",
+		["sheriffb"] = "sheriff Car 5",
+		["sherifft"] = "sheriff Car 6",
 		["sheriff"] = "Sheriff Car 1",
 		["sheriff2"] = "Sheriff Car 2",
 	},
 	-- Grade 3
 	[3] = {
-		["police"] = "Police Car 1",
-		["police2"] = "Police Car 2",
-		["police3"] = "Police Car 3",
-		["police4"] = "Police Car 4",
-		["policeb"] = "Police Car 5",
-		["policet"] = "Police Car 6",
+		["sheriff"] = "sheriff Car 1",
+		["sheriff2"] = "sheriff Car 2",
+		["sheriff3"] = "sheriff Car 3",
+		["sheriff4"] = "sheriff Car 4",
+		["sheriffb"] = "sheriff Car 5",
+		["sherifft"] = "sheriff Car 6",
 		["sheriff"] = "Sheriff Car 1",
 		["sheriff2"] = "Sheriff Car 2",
 	},
 	-- Grade 4
 	[4] = {
-		["police"] = "Police Car 1",
-		["police2"] = "Police Car 2",
-		["police3"] = "Police Car 3",
-		["police4"] = "Police Car 4",
-		["policeb"] = "Police Car 5",
-		["policet"] = "Police Car 6",
+		["sheriff"] = "sheriff Car 1",
+		["sheriff2"] = "sheriff Car 2",
+		["sheriff3"] = "sheriff Car 3",
+		["sheriff4"] = "sheriff Car 4",
+		["sheriffb"] = "sheriff Car 5",
+		["sherifft"] = "sheriff Car 6",
 		["sheriff"] = "Sheriff Car 1",
 		["sheriff2"] = "Sheriff Car 2",
 	}
@@ -291,7 +291,7 @@ Config.Radars = { -- Radar Locations
 	vector4(-823.3688, -1146.980, 8.0, 300.0),
 }
 
-Config.CarItems = { -- Default Trunk Items for Police Vehicles
+Config.CarItems = { -- Default Trunk Items for sheriff Vehicles
     [1] = {
         name = "heavyarmor",
         amount = 2,
@@ -307,7 +307,7 @@ Config.CarItems = { -- Default Trunk Items for Police Vehicles
         slot = 2,
     },
     [3] = {
-        name = "police_stormram",
+        name = "sheriff_stormram",
         amount = 1,
         info = {},
         type = "item",
@@ -316,7 +316,7 @@ Config.CarItems = { -- Default Trunk Items for Police Vehicles
 }
 
 Config.Items = { -- Items to be displayed on Armory
-    label = "Police Armory",
+    label = "sheriff Armory",
     slots = 30,
     items = {
         [1] = {
@@ -461,7 +461,7 @@ Config.Items = { -- Items to be displayed on Armory
             authorizedJobGrades = {0, 1, 2, 3, 4}
         },
         [14] = {
-            name = "police_stormram",
+            name = "sheriff_stormram",
             price = 0,
             amount = 50,
             info = {},
