@@ -13,7 +13,13 @@ version '1.0.0'
 dependencies {
     'qb-core',
     'qb-sheriffjob',
-    'qb-shiftlogger'
+    'qb-shiftlogger',
+    'qb-managemen',
+    'qb-garages',
+    'qb-menu',
+    'qb-input',
+    
+
 }
 
 files {
