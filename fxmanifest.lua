@@ -1,7 +1,7 @@
 fx_version 'cerulean'
 game 'gta5'
 
-description 'QB-PoliceJob'
+description 'qb-sheriffjob'
 version '1.2.5'
 
 shared_scripts {

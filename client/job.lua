@@ -453,13 +453,13 @@ RegisterNetEvent('police:client:EvidenceStashDrawer', function(data)
     end
 end)
 
-RegisterNetEvent('qb-policejob:ToggleDuty', function()
+RegisterNetEvent('qb-sheriffjob:ToggleDuty', function()
     TriggerServerEvent("QBCore:ToggleDuty")
     TriggerServerEvent("police:server:UpdateCurrentCops")
     TriggerServerEvent("police:server:UpdateBlips")
 end)
 
-RegisterNetEvent('qb-police:client:scanFingerPrint', function()
+RegisterNetEvent('qb-sheriff:client:scanFingerPrint', function()
     local player, distance = GetClosestPlayer()
     if player ~= -1 and distance < 2.5 then
         local playerId = GetPlayerServerId(player)
@@ -469,7 +469,7 @@ RegisterNetEvent('qb-police:client:scanFingerPrint', function()
     end
 end)
 
-RegisterNetEvent('qb-police:client:openArmoury', function()
+RegisterNetEvent('qb-sheriff:client:openArmoury', function()
     local authorizedItems = {
         label = Lang:t('menu.pol_armory'),
         slots = 30,
@@ -489,7 +489,7 @@ RegisterNetEvent('qb-police:client:openArmoury', function()
     TriggerServerEvent("inventory:server:OpenInventory", "shop", "police", authorizedItems)
 end)
 
-RegisterNetEvent('qb-police:client:spawnHelicopter', function(k)
+RegisterNetEvent('qb-sheriff:client:spawnHelicopter', function(k)
     if IsPedInAnyVehicle(PlayerPedId(), false) then
         QBCore.Functions.DeleteVehicle(GetVehiclePedIsIn(PlayerPedId()))
     else
@@ -510,12 +510,12 @@ RegisterNetEvent('qb-police:client:spawnHelicopter', function(k)
     end
 end)
 
-RegisterNetEvent("qb-police:client:openStash", function()
+RegisterNetEvent("qb-sheriff:client:openStash", function()
     TriggerServerEvent("inventory:server:OpenInventory", "stash", "policestash_"..QBCore.Functions.GetPlayerData().citizenid)
     TriggerEvent("inventory:client:SetCurrentStash", "policestash_"..QBCore.Functions.GetPlayerData().citizenid)
 end)
 
-RegisterNetEvent('qb-police:client:openTrash', function()
+RegisterNetEvent('qb-sheriff:client:openTrash', function()
     TriggerServerEvent("inventory:server:OpenInventory", "stash", "policetrash", {
         maxweight = 4000000,
         slots = 300,
@@ -595,7 +595,7 @@ local function fingerprint()
             if inFingerprint and PlayerJob.name == "police" then
                 if PlayerJob.onduty then sleep = 5 end
                 if IsControlJustReleased(0, 38) then
-                    TriggerEvent("qb-police:client:scanFingerPrint")
+                    TriggerEvent("qb-sheriff:client:scanFingerPrint")
                     break
                 end
             else
@@ -613,7 +613,7 @@ local function armoury()
             if inArmoury and PlayerJob.name == "police" then
                 if PlayerJob.onduty then sleep = 5 end
                 if IsControlJustReleased(0, 38) then
-                    TriggerEvent("qb-police:client:openArmoury")
+                    TriggerEvent("qb-sheriff:client:openArmoury")
                     break
                 end
             else
@@ -631,7 +631,7 @@ local function heli()
             if inHelicopter and PlayerJob.name == "police" then
                 if PlayerJob.onduty then sleep = 5 end
                 if IsControlJustReleased(0, 38) then
-                    TriggerEvent("qb-police:client:spawnHelicopter")
+                    TriggerEvent("qb-sheriff:client:spawnHelicopter")
                     break
                 end
             else
@@ -695,7 +695,7 @@ if Config.UseTarget then
                 options = {
                     {
                         type = "client",
-                        event = "qb-policejob:ToggleDuty",
+                        event = "qb-sheriffjob:ToggleDuty",
                         icon = "fas fa-sign-in-alt",
                         label = "Sign In",
                         job = "police",
@@ -734,7 +734,7 @@ exports['qb-target']:AddTargetBone(bones, {
                 options = {
                     {
                         type = "client",
-                        event = "qb-police:client:openStash",
+                        event = "qb-sheriff:client:openStash",
                         icon = "fas fa-dungeon",
                         label = "Open Personal Stash",
                         job = "police",
@@ -756,7 +756,7 @@ exports['qb-target']:AddTargetBone(bones, {
                 options = {
                     {
                         type = "client",
-                        event = "qb-police:client:openTrash",
+                        event = "qb-sheriff:client:openTrash",
                         icon = "fas fa-trash",
                         label = "Open Trash",
                         job = "police",
@@ -778,7 +778,7 @@ exports['qb-target']:AddTargetBone(bones, {
                 options = {
                     {
                         type = "client",
-                        event = "qb-police:client:scanFingerPrint",
+                        event = "qb-sheriff:client:scanFingerPrint",
                         icon = "fas fa-fingerprint",
                         label = "Open Fingerprint",
                         job = "police",
@@ -800,7 +800,7 @@ exports['qb-target']:AddTargetBone(bones, {
                 options = {
                     {
                         type = "client",
-                        event = "qb-police:client:openArmoury",
+                        event = "qb-sheriff:client:openArmoury",
                         icon = "fas fa-swords",
                         label = "Open Armory",
                         job = "police",

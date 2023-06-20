@@ -1,7 +1,7 @@
 # QBCore Sheriff Job
 QBCore Sheriff Job
 Sheriff Job for QBCore Framework :police_officer:
-remake of qb-policejob
+remake of qb-sheriffjob
 added Quasar Phone Notifications
 # License
 
